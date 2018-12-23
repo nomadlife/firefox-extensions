@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "django-admin-cookbook-styler",
+    "version": "1.0",
+  
+    "description": "presonal css style for django-admin-cookbook.",
+  
+    "icons": {
+      "48": "icons/icons8-pelican-48.png"
+    },
+    
+    "browser_action": {
+      "default_icon": {
+        "16": "icons/icons8-pelican-16.png",
+        "32": "icons/icons8-pelican-32.png"
+      }
+    },
+
+    "background": {
+      "scripts": ["background.js"]
+  }
+  
+  }
