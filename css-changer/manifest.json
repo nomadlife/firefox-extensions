@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "css-changer",
+  "version": "1.0",
+  "description": "presonal css style for django-admin-cookbook.",
+  "icons": {
+    "48": "icons/icons8-css-50.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/icons8-css-16.png",
+      "32": "icons/icons8-css-32.png"
+      },
+      "default_title": "CSS Changer",
+      "default_popup": "popup/choose_beast.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://books.agiliq.com/projects/django-admin-cookbook/*"],
+      "js": ["django-admin-cookbook-css.js"]
+    },
+    {
+      "matches": ["*://www.chartjs.org/docs/latest/developers/*"],
+      "js": ["chartjs-docs-css.js"]
+    }
+  ]
+}
