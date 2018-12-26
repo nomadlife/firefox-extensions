@@ -1,0 +1,39 @@
+{
+
+  "description": "Adds a browser action icon to the toolbar. Click the button to choose a beast. The active tab's body content is then replaced with a picture of the chosen beast. See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples#beastify",
+  "manifest_version": 2,
+  "name": "CSS Changer-2",
+  "version": "1.0",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify",
+  "icons": {
+    "48": "icons/beasts-48.png"
+  },
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/icons8-css-32.png",
+    "default_title": "CSS Changer-2",
+    "default_popup": "popup/choose_beast.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://www.chartjs.org/docs/latest/developers/*"],
+      "js": ["chartjs-docs-css.js"]
+    },
+    {
+      "matches": ["*://books.agiliq.com/projects/django-admin-cookbook/*"],
+      "js": ["django-admin-cookbook-css.js"]
+    }    
+  ],
+
+  "web_accessible_resources": [
+    "beasts/frog.jpg",
+    "beasts/turtle.jpg",
+    "beasts/snake.jpg"
+  ]
+
+}
